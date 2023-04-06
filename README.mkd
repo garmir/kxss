@@ -1,7 +1,7 @@
 # kxss
 
 I really need to rewrite that description. There's probably something like this already out there,
-but I'm on a plane with no internet connection so I can't check that right now.
+but I'm on a plane with no internet connection so I can't check.
 
 I miss StackOverflow.
 
