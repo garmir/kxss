@@ -1,8 +1,9 @@
 # kxss
 
-I don't know what this name is. There might even be something that has this name already,
-but I'm on a plane with no internet connection so I can't check that right now. Also:
-who said you needed StackOverflow to be able to write code? ¯\\\_(ツ)\_/¯
+I really need to rewrite that description. There's probably something like this already out there,
+but I'm on a plane with no internet connection so I can't check that right now. 
+I miss StackOverflow.
+(╥_╥)
 
 ## Idea
 
