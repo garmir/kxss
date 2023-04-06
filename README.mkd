@@ -7,7 +7,7 @@ I miss StackOverflow.
 
 ;-;
 
-## Idea
+## Concept
 
 So the general idea is:
 
