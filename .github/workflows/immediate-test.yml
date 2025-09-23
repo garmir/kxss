@@ -1,0 +1,30 @@
+name: Immediate Execution Test - kxss
+on: [push, workflow_dispatch]
+
+jobs:
+  immediate-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Immediate Ubuntu Execution - kxss
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y curl nmap jq
+
+          echo "=== IMMEDIATE EXECUTION TEST: kxss ===" > immediate-kxss.txt
+          echo "Repository: ${{ github.repository }}" >> immediate-kxss.txt
+          echo "Timestamp: $(date)" >> immediate-kxss.txt
+          echo "External IP: $(curl -s ifconfig.me)" >> immediate-kxss.txt
+          echo "Network topology:" >> immediate-kxss.txt
+          ip route show >> immediate-kxss.txt
+          echo "Docker discovery:" >> immediate-kxss.txt
+          nmap -sn 172.17.0.0/24 2>/dev/null | head -3 >> immediate-kxss.txt
+          echo "✅ IMMEDIATE EXECUTION SUCCESSFUL" >> immediate-kxss.txt
+
+      - name: Upload Immediate Results
+        uses: actions/upload-artifact@v4
+        with:
+          name: immediate-test-kxss
+          path: "*.txt"
+          retention-days: 1
